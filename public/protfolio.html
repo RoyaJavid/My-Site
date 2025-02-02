@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roya Javid</title>
+    <link rel="shortcut icon" type="image/jpg" href="../public/favicon.jpg" />
+    <link rel="stylesheet" href="../css/protfolio.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- icons links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!----------------------sidebar start--------------------->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../assets/profile.jpg" alt="" />
+        <h2>RoyaCoding</h2>
+        <svg
+          onclick="hideSidebar()"
+          class="close-icon"
+          style="padding-left: 10px"
+          xmlns="http://www.w3.org/2000/svg"
+          height="35px"
+          viewBox="0 -960 960 960"
+          width="35px"
+          fill="#FFFFFF"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </div>
+      <ul class="sidebar-links">
+        <h4>
+          <span>Main Menu</span>
+          <div class="menu-separator"></div>
+        </h4>
+        <li>
+          <a href="../public/login.html">
+            <span class="material-symbols-outlined"> login </span>Login
+          </a>
+        </li>
+        <li>
+          <a href="../public/projects.html">
+            <span class="material-symbols-outlined"> folder </span>Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="../public/skills.html">
+            <span class="material-symbols-outlined"> monitoring </span>Skills
+          </a>
+        </li>
+        <h4>
+          <span>General</span>
+          <div class="menu-separator"></div>
+        </h4>
+
+        <li>
+          <a href="../public/educations.html">
+            <span class="material-symbols-outlined"> school </span>Education
+          </a>
+        </li>
+        <li>
+          <a href="../public/hobby.html">
+            <span class="material-symbols-outlined"> stadia_controller </span
+            >Hobby
+          </a>
+        </li>
+        <li>
+          <a href="../public/languages.html">
+            <span class="material-symbols-outlined"> language </span>Languages
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              text-decoration: line-through;
+              text-decoration-color: red;
+              text-decoration-thickness: 2px;
+            "
+          >
+            <span class="material-symbols-outlined"> flag </span>all reports
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              text-decoration: line-through;
+              text-decoration-color: red;
+              text-decoration-thickness: 2px;
+            "
+          >
+            <span class="material-symbols-outlined"> notifications_active </span
+            >Notifications
+          </a>
+        </li>
+        <h4>
+          <span>Account</span>
+          <div class="menu-separator"></div>
+        </h4>
+
+        <li>
+          <a href="../public/contect.html">
+            <span class="material-symbols-outlined"> account_circle </span
+            >Contect Me
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              text-decoration: line-through;
+              text-decoration-color: red;
+              text-decoration-thickness: 2px;
+            "
+          >
+            <span class="material-symbols-outlined"> settings </span>Settings
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            style="
+              text-decoration: line-through;
+              text-decoration-color: red;
+              text-decoration-thickness: 2px;
+            "
+          >
+            <span class="material-symbols-outlined"> logout </span>Logout
+          </a>
+        </li>
+      </ul>
+      <div class="user-account">
+        <div class="user-profile">
+          <a href="../index.html"
+            ><img src="../assets/profile.jpg" alt="profile-img"
+          /></a>
+          <div class="user-detail">
+            <h3>Roya Javid</h3>
+            <span>Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!----------------------sidebar end-------------------->
+    <!----------------------navbar start-------------------->
+    <nav class="navbar">
+      <a href="#" class="logo">portfolio.</a>
+      <div class="search-box">
+        <div class="galaxy"></div>
+        <div id="search-container">
+          <div class="nebula"></div>
+          <div class="starfield"></div>
+          <div class="cosmic-dust"></div>
+          <div class="cosmic-dust"></div>
+          <div class="cosmic-dust"></div>
+          <div class="stardust"></div>
+          <div class="cosmic-ring"></div>
+          <div id="main">
+            <input
+              class="input"
+              name="text"
+              type="text"
+              placeholder="Do You Want Help..."
+            />
+            <div id="input-mask"></div>
+            <div id="cosmic-glow"></div>
+            <div class="wormhole-border"></div>
+            <div id="wormhole-icon">
+              <svg
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                stroke="#a9c7ff"
+                fill="none"
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+              >
+                <circle r="10" cy="12" cx="12"></circle>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <div id="search-icon">
+              <svg
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2"
+                stroke="url(#cosmic-search)"
+                fill="none"
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+              >
+                <circle r="8" cy="11" cx="11"></circle>
+                <line y2="16.65" x2="16.65" y1="21" x1="21"></line>
+                <defs>
+                  <linearGradient
+                    gradientTransform="rotate(45)"
+                    id="cosmic-search"
+                  >
+                    <stop stop-color="#a9c7ff" offset="0%"></stop>
+                    <stop stop-color="#6e8cff" offset="100%"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="menu-bar"
+        onclick="showSidebar()"
+        xmlns="http://www.w3.org/2000/svg"
+        height="35px"
+        viewBox="0 -960 960 960"
+        width="35px"
+        fill="#FFFFFF"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+        />
+      </svg>
+    </nav>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
+    <!----------------------navbar end-------------------->
+
+    <!----------------------home start-------------------->
+    <section class="home">
+      <div class="home-info">
+        <h1>Roya Javid</h1>
+        <h2>
+          i`m a
+          <span style="--i: 4" data-text="Front-End Developer"
+            >Front-End Developer</span
+          >
+          <span style="--i: 3" data-text="Youtuber">Youtuber</span>
+          <span style="--i: 2" data-text="Teacher">Teacher</span>
+          <span style="--i: 1" data-text="Designer">Designer</span>
+        </h2>
+        <p>
+          به عنوان یک مهندس پر شور و با انگیزه وب فرانت اند با ذهن خلاق و
+          توانایی قوی در حل مشکلات، به دنبال یک دوره کارآموزی برای استفاده کامل
+          از این استعداد ها، مهارت و تجربه ها در زمینه فناوری اطلاعات هستم تا
+          برای اطمینان از موفقعیت شرکت استفاده کنم
+        </p>
+        <div class="btn-sci">
+          <a
+            href="../projects/flower-shop/index.html"
+            target="_blank"
+            class="btn"
+            >Main Project</a
+          >
+          <div class="sci">
+            <a
+              href="https://github.com/RoyaJavid"
+              target="_blank"
+              rel="noopener"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/roya-javid-772247336"
+              target="_blank"
+              rel="noopener"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="../assets/profile.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------home end-------------------->
+  </body>
+</html>

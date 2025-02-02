@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Shrikhand&display=swap");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s linear;
+  font-family: "Lalezar", serif;
+}
+body {
+  background: rgb(0, 17, 82);
+  background-image: radial-gradient(#908a8a 1px, transparent 1px),
+    radial-gradient(#bcb2b2 1px, transparent 1px);
+  background-size: 60px 60px;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1s linear forwards;
+  animation-delay: 0.2s;
+}
+@keyframes show-content {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.container {
+  padding: 15px 8%;
+  padding-bottom: 100px;
+  position: relative;
+}
+.container .heading {
+  font-family: "Shrikhand", serif;
+  text-align: center;
+  padding-bottom: 15px;
+  color: rgb(214, 215, 218);
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+}
+.container .back-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin: 20px 0 0 20px;
+  background: none;
+  border: 2px solid #7cf03d;
+  padding: 5px 20px 5px 15px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  font-size: 20px;
+  font-weight: 600;
+  color: #7cf03d;
+}
+.container .back-btn:hover {
+  background: #7cf03d;
+  color: #1f242d;
+  letter-spacing: 1.05px;
+}
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+  position: relative;
+}
+.container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  background: #55c618;
+  text-align: right;
+  padding: 15px 20px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.container .box-container .box .info {
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+}
+.container .box-container .box img {
+  height: 35px;
+  margin-left: 10px;
+}
+.container .box-container .box h3 {
+  color: #1f242d;
+  text-align: right;
+  font-size: 22px;
+  padding: 10px 0;
+  word-break: keep-all;
+}
+.container .box-container .box p {
+  color: #40454f;
+  text-align: right;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.container .box-container .box .btn {
+  margin-top: 10px;
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #233d6e;
+  color: #55c618;
+  font-size: 17px;
+  border-radius: 20px;
+  padding: 8px 25px;
+  width: 120px;
+}
+.container .box-container .box .btn:hover {
+  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.4);
+}
+.container .box-container .box:hover {
+  box-shadow: 0 0px 17px #7cf03d;
+}
+.bg-logo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+}
+.bg-logo img {
+  height: 170px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .heading {
+    display: block;
+    margin: 50px 0 10px;
+  }
+}

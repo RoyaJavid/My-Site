@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: rgb(0, 17, 82);
+  background-image: radial-gradient(#908a8a 1px, transparent 1px),
+    radial-gradient(#bcb2b2 1px, transparent 1px);
+  background-size: 60px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1s linear forwards;
+  animation-delay: 0.2s;
+}
+@keyframes show-content {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.back-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin: 20px 0 0 20px;
+  background: none;
+  border: 2px solid #7cf03d;
+  padding: 5px 20px 5px 15px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  font-size: 20px;
+  font-weight: 600;
+  color: #7cf03d;
+  text-decoration: none;
+  font-family: "Lalezar", serif;
+}
+.back-btn:hover {
+  background: #7cf03d;
+  color: #1f242d;
+  letter-spacing: 1.05px;
+}
+.container {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  padding: 30px 60px 40px 40px;
+}
+.container .contect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .contect .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.container .contect .left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.container .contect .left-side .details {
+  margin: 14px;
+  text-align: center;
+}
+.container .contect .left-side .details i {
+  font-size: 30px;
+  color: #59af2b;
+  margin-bottom: 10px;
+}
+.container .contect .left-side .details .topic {
+  font-family: "Lalezar", serif;
+  color: #59af2b;
+  font-size: 18px;
+  font-weight: 500;
+}
+.contect .left-side .details .text-one,
+.contect .left-side .details .text-two {
+  font-family: "Lalezar", serif;
+  font-size: 14px;
+  color: #fff;
+}
+.container .contect .right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+.container .contect .right-side .topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #59af2b;
+  text-align: center;
+}
+.container .contect .right-side p {
+  font-family: "Lalezar", serif;
+  text-align: center;
+  color: #fff;
+}
+.right-side .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: #f0f1f8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+::placeholder {
+  color: #e5e5e5;
+}
+
+.right-side .message-box {
+  min-height: 110px;
+  margin-top: 6px;
+}
+.right-side .button {
+  margin-top: 6px;
+  display: inline-block;
+}
+.right-side .button input[type="button"] {
+  color: rgb(0, 17, 82);
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: #59af2b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover {
+  box-shadow: 0 0 9px #a2a1a1;
+}
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+    padding: 30px 35px 40px 35px;
+    margin-top: 90px;
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    margin: 40px 0;
+    height: 100%;
+    margin-top: 90px;
+  }
+  .container .contect {
+    flex-direction: column-reverse;
+  }
+  .container .contect .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container .contect .left-side::before {
+    display: none;
+  }
+  .container .contect .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
+}

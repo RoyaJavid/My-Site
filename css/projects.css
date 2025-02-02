@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Shrikhand&display=swap");
+/*=================variables css=================*/
+:root {
+  /*==========colors==========*/
+  /*color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 23%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: #1f242d;
+  --container-color: #55c618;
+  /*==========font and typography==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "poppins", sans-serif;
+  --h2-font-size: 1.15rem;
+  --small-font-size: 0.812rem;
+}
+/*==========responsive typography==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: 0.875rem;
+  }
+}
+/*==========base==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(0, 17, 82);
+  background-image: radial-gradient(#908a8a 1px, transparent 1px),
+    radial-gradient(#bcb2b2 1px, transparent 1px);
+  background-size: 60px 60px;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  height: 150vh;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1s linear forwards;
+  animation-delay: 0.2s;
+}
+@keyframes show-content {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.heading {
+  font-family: "Shrikhand", serif;
+  text-align: center;
+  padding-bottom: 15px;
+  color: rgb(214, 215, 218);
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+  padding: 15px;
+}
+.back-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin: 20px 0 0 20px;
+  background: none;
+  border: 2px solid #7cf03d;
+  padding: 5px 20px 5px 15px;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  font-size: 20px;
+  font-weight: 600;
+  color: #7cf03d;
+  text-decoration: none;
+  font-family: "Lalezar", serif;
+  z-index: 100;
+}
+.back-btn:hover {
+  background: #7cf03d;
+  color: #1f242d;
+  letter-spacing: 1.05px;
+}
+/*==========card==========*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+.card--container {
+  display: grid;
+  row-gap: 5.5rem;
+}
+.card--article {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  margin-bottom: 7px;
+  width: 340px;
+}
+.card--article:hover {
+  box-shadow: 0 0px 17px #7cf03d;
+}
+.card--article img {
+  width: 340px;
+}
+.card--img {
+  width: 350px;
+  border-radius: 1.5rem;
+}
+.card--data {
+  background-color: var(--container-color);
+  width: 250px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(99, 86%, 59%, 0.35);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+.card--description {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-family: "Lalezar", serif;
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+}
+.card--description:hover {
+  letter-spacing: 1px;
+}
+.card--title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.35rem;
+}
+.card--button {
+  text-decoration: none;
+  color: var(--first-color);
+  font-family: "Lalezar", serif;
+}
+.card--button:hover {
+  text-decoration: underline;
+}
+/*==========naming animations in hover==========*/
+.card--article:hover .card--data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-6rem);
+  }
+}
+.card--article:not(:hover) .card--data {
+  animation: remove-data 1s forwards;
+}
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-9rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+.card--article:hover {
+  animation: remove-overflow 2s forwards;
+}
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+.card--article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+/*==========breakpoints==========*/
+/*for small devices*/
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .card--data {
+    width: 350px;
+    padding: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .heading {
+    margin-top: 50px;
+  }
+}
+/*for medium devices*/
+@media screen and (min-width: 768px) {
+  .card--container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+/*for large devices*/
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 0;
+  }
+  .card--container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card--img {
+    width: 348px;
+  }
+  .card--data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+/*--------------------scrollbar------------------*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 73, 143);
+  border-radius: 10px;
+}
